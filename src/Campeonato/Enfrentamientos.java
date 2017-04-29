@@ -1,9 +1,11 @@
 package Campeonato;
 
+import crud.Crud;
+
 /**
  * Created by heriberto on 28/04/17.
  */
-public class Enfrentamientos extends Equipos {
+public class Enfrentamientos  implements Crud{
 
     private int id_enfrentamiento;
     private String equipoLocal;
@@ -14,7 +16,7 @@ public class Enfrentamientos extends Equipos {
     private int id_golesVisitante;
 
 
-    public Enfrentamientos() {
+    public Enfrentamientos(int id_enfrentamiento, String equipoLocal, String equipoVisitante, String ganador, String estadio, int id_golesLocal, int id_golesVisitante) {
         this.id_enfrentamiento = id_enfrentamiento;
         this.equipoLocal = equipoLocal;
         this.equipoVisitante = equipoVisitante;
@@ -79,4 +81,38 @@ public class Enfrentamientos extends Equipos {
     public void setId_golesVisitante(int id_golesVisitante) {
         id_golesVisitante = id_golesVisitante;
     }
+
+    @Override
+    public void crear(Crud objeto) {
+
+        //insertar=mysql( "INSERT INTO Jugadores( equipoLocal, equipoVisitante, ganador, estadio, id_golesLocal, id_golesVisitante) VALUES ('equipoLocal', 'equipoVisitante', 'ganador', 'estadio', 'id_golesLocal', 'id_golesVisitante')");
+
+
+    }
+
+    @Override
+    public void actualizar(Crud objeto) {
+
+        // editar =  mysql (" UPDATE Enfrentamientos SET equipoLocal = 'equipoLocal', equipoVisitante = 'equipoVisitante', ganador = 'ganador', estadio = 'estadio',  id_golesLocal = 'id_golesLocal', id_golesVisitante = 'id_golesVisitante'  WHERE id_enfrentamientos = 'id_enfrentamientos' ");
+
+
+    }
+
+    @Override
+    public void eliminar(Crud objeto) {
+
+        // eliminar = mysql( "DELETE FROM Enfrentamientos WHERE id_enfrentamientos = 'id_enfrentamientos' ");
+
+
+    }
+
+    @Override
+    public void ver(Crud objeto) {
+
+        //consulta = mysql ("SELECT * FROM Enfrentamientos");
+
+
+    }
+
+
 }

@@ -1,11 +1,11 @@
 package Campeonato;
 
-import crud.Crear;
+import crud.Crud;
 
 /**
  * Created by heriberto on 28/04/17.
  */
-public class Equipos extends Crear{
+public class Equipos implements Crud{
 
     private int id_equipo;
     private String jugadores [];
@@ -15,7 +15,7 @@ public class Equipos extends Crear{
     private String medico;
     private int partidosJugados;
 
-    public Equipos() {
+    public Equipos(int id_equipo, String[] jugadores, String nombreEquipo, int uniformes, String entrenador, String medico, int partidosJugados) {
         this.id_equipo = id_equipo;
         this.jugadores = jugadores;
         this.nombreEquipo = nombreEquipo;
@@ -81,4 +81,35 @@ public class Equipos extends Crear{
         this.partidosJugados = partidosJugados;
     }
 
+    @Override
+    public void crear(Crud objeto) {
+
+        //insertar=mysql( "INSERT INTO Equipos( jugadores, nombreEquipo, uniformes, entrenador, medico, partidosJugados) VALUES ('nombreEquipo','jugadores','uniformes','entrenador','medico','partidosJugados')");
+
+
+    }
+
+    @Override
+    public void actualizar(Crud objeto) {
+
+        // editar =  mysql (" UPDATE Equipos SET nombreEquipo = 'nombreEquipo', jugadores = 'jugadores', uniformes = 'uniformes', entrenador = 'entrenador',  medico = 'medico', partidosJugados = 'partidosJugados'  WHERE id_equipo = 'id_equipo' ");
+
+
+    }
+
+    @Override
+    public void eliminar(Crud objeto) {
+
+        // eliminar = mysql( "DELETE FROM Equipos WHERE id_equipo = 'id_equipo'");
+
+
+    }
+
+    @Override
+    public void ver(Crud objeto) {
+
+        //consulta = mysql ("SELECT * FROM Equipos");
+
+
+    }
 }

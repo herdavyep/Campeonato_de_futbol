@@ -1,9 +1,11 @@
 package Campeonato;
 
+import crud.Crud;
+
 /**
  * Created by heriberto on 28/04/17.
  */
-public class Clasificacion extends Enfrentamientos{
+public class Clasificacion implements Crud{
 
     private int id_clasificacion;
     private int puntos;
@@ -13,7 +15,6 @@ public class Clasificacion extends Enfrentamientos{
     private int id_goles;
 
     public Clasificacion(int id_clasificacion, int puntos, int posicion, int id_equipo, int id_partidosJugados, int id_goles) {
-        super();
         this.id_clasificacion = id_clasificacion;
         this.puntos = puntos;
         this.posicion = posicion;
@@ -69,4 +70,38 @@ public class Clasificacion extends Enfrentamientos{
     public void setId_goles(int id_goles) {
         this.id_goles = id_goles;
     }
+
+
+    @Override
+    public void crear(Crud objeto) {
+
+        //insertar=mysql( "INSERT INTO Clasificacion( puntos, posicion, id_equipo, id_partidosJugados, id_goles ) VALUES ('puntos', 'posicion', 'id_equipo', 'id_partidosJugados', 'id_goles')");
+
+
+    }
+
+    @Override
+    public void actualizar(Crud objeto) {
+
+        // editar =  mysql (" UPDATE Clasificacion SET puntos = 'puntos', posicion = 'posicion', id_equipo = 'id_equipo', id_partidosJugados = 'id_partidosJugados',  id_goles = 'id_goles'  WHERE id_clasificacion = 'id_clasificacion' ");
+
+
+    }
+
+    @Override
+    public void eliminar(Crud objeto) {
+
+        // eliminar = mysql( "DELETE FROM Clasificacion WHERE id_clasificacion = 'id_clasificacion' ");
+
+
+    }
+
+    @Override
+    public void ver(Crud objeto) {
+
+        //consulta = mysql ("SELECT * FROM Clasificacion");
+
+
+    }
+
 }

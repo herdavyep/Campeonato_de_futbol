@@ -1,9 +1,11 @@
 package Campeonato;
 
+import crud.Crud;
+
 /**
  * Created by heriberto on 28/04/17.
  */
-public class Jugadores extends Equipos{
+public class Jugadores implements Crud{
 
     private int id_jugadores;
     private int id_equipo;
@@ -15,7 +17,6 @@ public class Jugadores extends Equipos{
     private int goles;
 
     public Jugadores(int id_jugadores, int id_equipo, String nombreJugador, String posicion, String nacionalidad, int numeroCamiseta, String pieDominante, int goles) {
-        super();
         this.id_jugadores = id_jugadores;
         this.id_equipo = id_equipo;
         this.nombreJugador = nombreJugador;
@@ -88,5 +89,37 @@ public class Jugadores extends Equipos{
 
     public void setGoles(int goles) {
         this.goles = goles;
+    }
+
+    @Override
+    public void crear(Crud objeto) {
+
+        //insertar=mysql( "INSERT INTO Jugadores( id_equipo, nombreJugador, posicion, nacionalidad, numeroCamiseta, pieDominante, goles) VALUES ('id_equipo', 'nombreJugador+, 'posicion', 'nacionalidad', 'numeroCamiseta', 'pieDominante', 'goles')");
+
+
+    }
+
+    @Override
+    public void actualizar(Crud objeto) {
+
+        // editar =  mysql (" UPDATE Jugadores SET id_equipo = 'id_equipo', nombreJugador = 'nombreJugador', posicion = 'posicion', nacionalidad = 'nacionalidad',  numeroCamiseta = 'numeroCamiseta', pieDominante = 'pieDominante', goles = 'goles'  WHERE id_jugadores = 'id_jugadores' ");
+
+
+    }
+
+    @Override
+    public void eliminar(Crud objeto) {
+
+        // eliminar = mysql( "DELETE FROM Jugadores WHERE id_jugadores = 'id_jugadores' ");
+
+
+    }
+
+    @Override
+    public void ver(Crud objeto) {
+
+        //consulta = mysql ("SELECT * FROM Jugadores");
+
+
     }
 }
